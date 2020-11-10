@@ -1,16 +1,21 @@
-[![Build Status](https://travis-ci.org/dat3startcode/rest-jpa-devops-startcode.svg?branch=master)](https://travis-ci.org/dat3startcode/rest-jpa-devops-startcode)
+[![Build Status](https://travis-ci.com/fdinsen/CA3.svg?branch=main)](https://travis-ci.com/fdinsen/CA3)
 
-*This project is meant as a startcode project for the semester project and exams at CPH-Business "AP-Degree in Computer Science", 3rd Semester pi-group*
+<p>All of this expects you have a local user for your MySql databse called dev with ax2 as password</p>
 
-*Projects which are expected to use this start-code are projects that require all, or most of the following technologies:*
- - *JPA and REST*
-- *Testing, including database test*
-- *Testing, including tests of REST-API's*
-- *CI and CONTINUOUS DELIVERY*
+<p>Remember to start your local docker envoriment and run "docker-compose up -d" where your docker image is installed </p>
 
-### Preconditions
-*In order to use this code, you should have a local developer setup + a "matching" droplet on Digital Ocean as described in the 3. semester guidelines* 
-# Getting Started
+<p>Remember to give travis acces to your repository through <br></p>
+https://travis-ci.com/account/repositories --> Mange repositories on github
 
-This document explains how to use this code (build, test and deploy), locally with maven, and remotely with maven controlled by Travis
- - [How to use](https://docs.google.com/document/d/1K6s6Tt65bzB8bCSE_NUE8alJrLRNTKCwax3GEm4OjOE/edit?usp=sharing)
+<p>Remember to set the envorimental varibles in the branch in travis.</p>
+<p>REMOTE_USER = [Your server user]</p>
+<p>REMOTE_PW = [Your server password]</p>
+
+<p>Change or add your own connection string in EMF-Creator at line 43 and 46</p>
+<p>Add the connection string in docker-compose.yml on your digitalOcean under "enviroment"</p>
+
+<p>Create database on digitalOcean to match your local setup</p>
+
+<p>Rename the value in the <remote.server> tag to [Your server ip]/manager/text on line 19 </p>
+
+<p>Change the value on line 24 in persistence.xml to match the local database on your machine</p>
